@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="en"> 
+  <head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	  <meta http-equiv="Pragma" content="no-cache">
+	  <meta http-equiv="Expires" content="0">
+      <title>Friends Zone</title>
+	  <link rel="stylesheet" href="fzstyle.css">
+	  <style>
+	  </style>
+  </head>
+  <body class="hero-bg">
+		
+	  <div class="center-block">
+		  <h1 class="text-block-heading">
+		    <img id="fz" src="./images/friendszone.png" alt="Friends Zone Banner">
+			<br>
+			<span>Granite State - </span>
+			<span style="white-space: nowrap">
+				<a href="https://poolplayers.com/" title="APA Pool League" target="_blank" rel="noopener noreferrer">APA Pool League</a>
+			</span>
+		  </h1>
+	  </div>
+	  <div class="grid">
+		<div class="grid-left">
+			<img id="rotImg" src="./images/pooltable.webp" alt="Rotating Pool Images">
+		</div>
+
+		<div class="grid-right">
+			<h2 class="team-title">Team Friends Zone</h2>
+
+			<h3>Members<br>2026 Summer Session</h3>
+
+			<div class="teamMembers">
+				<ul>
+					<li>Allan Vigfusson</li>
+					<li>Dan Dozois Jr</li>
+					<li>Nicole Tancrede</li>
+					<li>Paully Bye</li>
+					<li>Kathy Lonergan</li>
+					<li>Justin Mazzone</li>
+					<li>Seeda Samsok</li>
+					<li>Abby Dozois</li>
+				</ul>
+			</div>
+
+			<div class="firstplace">
+				<span>1st Place</span>
+			</div>
+		</div>
+		
+	  <br>
+	 
+	
+	</div>
+	<div class="gridAcknowledgement">
+
+		I dedicate this page to my teammates<br>
+		as a celebration of their efforts.<br><br>
+		Our team put in exceptional effort <br>
+		throughout the APA Summer Session.<br><br>
+		We came together, worked hard,<br>
+		and achieved something truly remarkable.<br><br>
+		1st Place in our division<br>
+		and a spot in the Tri-Annual Championships.		
+	</div>
+
+	  
+	<br>
+	<div class="gridReferences">
+		<h1 class="text-block-heading">
+			Recommened<br> Billiard Training Videos
+		</h1>
+		<div class="trainingInfo">
+			<p>PoolHouse Billiards. (2026, January 20).<br> <a href="https://www.youtube.com/watch?v=TgJulGNrpvY" target="_blank" rel="noopener noreferrer" title="top breaking 8-ball like this (do THIS instead)"><i>Stop breaking 8-ball like this (do THIS instead)</i></a><br> [Video]. YouTube.</p>
+		</div>
+		<div class="trainingInfo">
+			<p>Sharivari. (n.d.).<br> <a href="https://www.youtube.com/watch?v=bqsOQO_Dsio" target="_blank" rel="noopener noreferrer"><i>How to always know where the cue ball will go</i></a><br> [Video]. YouTube.</p>
+		</div>
+		<div class="trainingInfo">
+			<p>World of Pool and Billiards. (n.d.).<br><a href="https://www.youtube.com/watch?v=kcFY0-Pfzxk" target="_blank" rel="noopener noreferrer"><i>How to aim ANY shot in pool</i></a><br> [Video]. YouTube.</p>
+		</div>
+	</div>
+	<div class="trainingInfo center-block">
+		I would like to acknowledge and thank the content creators for their videos.
+	</div>
+	<br>
+	
+	<div class="footer-container">
+		<div class="footer-content">
+			<img id="fz" src="./images/friendszone.png" alt="Friends Zone Banner">
+		</div>
+	</div>
+	
+	<div class="References gridReferences" >		
+		<div>
+			American Poolplayers Association. (2025). <i>American Poolplayers Association: World's largest pool league.</i> <a href="https://poolplayers.com" target="_blank" rel="noopener noreferrer" title="American Poolplayers Association" >https://poolplayers.com</a>
+		</div>
+		<div>
+			PoolHouse Billiards. (2026, January 20). <i>Stop breaking 8-ball like this (do THIS instead)</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=TgJulGNrpvY" target="_blank" rel="noopener noreferrer" title="Stop breaking 8-ball like this (do THIS instead)">Stop breaking 8-ball like this (do THIS instead)</a>
+		</div>
+		<div>
+			Sharivari. (n.d.). <i>How to always know where the cue ball will go</i> [Video]. YouTube.<a href="https://www.youtube.com/watch?v=bqsOQO_Dsio" target="_blank" rel="noopener noreferrer">How to always know where the cue ball will go</a>
+		</div>
+		<div>
+			World of Pool and Billiards. (n.d.). <i>How to aim ANY shot in pool.</i> [Video]. YouTube.<a href="https://www.youtube.com/watch?v=kcFY0-Pfzxk" target="_blank" rel="noopener noreferrer">How to aim ANY shot in pool</a>
+		</div>
+	</div>
+	  <script>
+	  
+	  activeimage=0;
+			
+		let imageList = [
+		'./images/pooltable.webp',
+		'./images/finalstats.jpeg',
+		'./images/pt1.jpeg',
+		'./images/poolshirt_front.png',
+		'./images/poolshirt_back.png',
+		'./images/teampic.jpeg',
+		'./images/pt2.jpg',
+		'./images/triannuals.jpeg']
+			
+		rotatingImage = setInterval(fnrotateImage,5000)
+		
+		
+		function fnrotateImage()
+		{
+			activeimage+=1;
+
+			if (activeimage > imageList.length-1)
+				activeimage=0;
+				
+			imgobj = document.getElementById("rotImg")
+			
+			imgobj.src = imageList[activeimage];
+			
+			
+		}
+	  </script>
+  </body>
+ </html>

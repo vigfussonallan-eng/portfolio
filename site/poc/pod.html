@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allan Vigfusson</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pod.css">
+</head>
+<body>
+  <h1 class="page-title">Allan Vigfusson</h1>
+  <div class="hero-wrap">
+    <img class="hero-image" src="https://bristolcc.instructure.com/images/thumbnails/2077957/eCCPRMW2rLqnDdKO1GN4k85pzWb7FO1tMh5WSnOD" alt="Profile image from grid.html">
+    <button class="question-mark" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="profileInfo">
+      <span class="sr-only">Show profile details</span>?
+    </button>
+    <div id="profileInfo" class="info-bubble" role="region" aria-labelledby="profileLabel">
+      <h2 id="profileLabel" class="sr-only">Profile details</h2>
+      <p>Email: <a href="mailto:nvigfusson11@bristolcc.edu">nvigfusson11@bristolcc.edu</a></p>
+      <p>Major: Computer Information Systems</p>
+      <p>Concentration: Cybersecurity &amp; Digital Forensics</p>
+    </div>
+  </div>
+
+  <div class="circle-grid">
+    <div class="circle-card">
+      <h2>Education</h2>
+      <p>Computer Information Systems student pursuing Cybersecurity & Digital Forensics at Bristol Community College.</p>
+    </div>
+    <div class="circle-card">
+      <h2>Experience</h2>
+      <p>Background in computer engineering technology with experience across networking, software, and enterprise architecture.</p>
+    </div>
+    <div class="circle-card">
+      <h2>Skills</h2>
+      <p>Network analysis, network engineering, software development, development management, and application architecture.</p>
+    </div>
+    <div class="circle-card">
+      <h2>Goals</h2>
+      <p>Grow a technology career focused on cybersecurity, digital forensics, and professional development in IT.</p>
+    </div>
+  </div>
+
+  <div class="links">
+    <a href="contents.html">Back to contents page</a>
+  </div>
+
+  <script>
+    const profileToggle = document.querySelector('.question-mark');
+    const heroWrap = document.querySelector('.hero-wrap');
+
+    heroWrap.addEventListener('focusin', () => {
+      profileToggle.setAttribute('aria-expanded', 'true');
+    });
+
+    heroWrap.addEventListener('focusout', () => {
+      setTimeout(() => {
+        if (!heroWrap.contains(document.activeElement)) {
+          profileToggle.setAttribute('aria-expanded', 'false');
+        }
+      }, 0);
+    });
+
+    profileToggle.addEventListener('click', () => {
+      const expanded = profileToggle.getAttribute('aria-expanded') === 'true';
+      profileToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        profileToggle.setAttribute('aria-expanded', 'false');
+        profileToggle.blur();
+      }
+    });
+  </script>
+</body>
+</html>
