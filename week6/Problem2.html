@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #10a631;
+        }
+        b {
+            color: #9510b6;
+        }
+        .hot {
+            color: #FF4500;
+        }
+
+        .cold {
+            color: #1E90FF;
+        }   
+    </style>
+</head>
+<body>
+  <h1>Problem 2</h1>
+  <h2>Good Day or Too Cold?</h2>
+ <script>
+    let temp;
+    
+    while (temp === "" || isNaN(temp) || temp === null) 
+    {
+        temp = prompt("What was the High Temperature today?");
+    }
+
+    document.write("<h3>Today's High Temperature: <b>" + temp + "</b> degrees</h3>");
+
+    if (temp > 70) {
+        document.write("<h4 class='hot'>It was a good day.</h4>");
+    } else {
+        document.write("<h4 class='cold'>It was too cold.</h4>");
+    }
+
+
+ </script>
+ <!-- Reflection: Noticed an issue when running the program. Had a case sensitvitiy issue with the method Document.write; the capital D caused the exception - Document.write is not a function -->
+</body>
+</html>

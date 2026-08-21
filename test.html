@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Banner</title>
+    <style>
+        /* Reset margins and set font */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Banner Container */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 450px; /* Adjust banner height here */
+            /* Dark gradient overlay + your banner image path */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                              url('./images/PoolCue.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Banner Text Content */
+        .banner-content {
+            color: #ffffff;
+            padding: 0 20px;
+            max-width: 800px;
+        }
+
+        .banner-content h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: Red;
+            opacity: .5;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Banner markup starts here -->
+    <div class="banner-container">
+        <div class="banner-content">
+            <img id="fz" src="./images/FriendsZone.png">
+        </div>
+    </div>
+
+</body>
+</html>

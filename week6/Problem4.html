@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #10a631;
+        }
+        b {
+            color: #1E90FF;
+        }
+      
+    </style>
+</head>
+<body>
+  <h1>Problem 4</h1>
+  <h2>Food Preferences</h2>
+ <script>
+    let question1;
+    let question2;
+
+    question1 = confirm("Do you like pasta?");
+    question2 = confirm("Do you like chicken?");
+
+    if (question1 && question2) {
+        document.write("<h3>You love delicious things!</h3>");
+    } else if (question1 && !question2 || !question1 && question2) {
+        document.write("<h3>You have good taste!</h3>");
+    } else if (!question1 && !question2) {
+        document.write("<h3>Maybe you’ll find something you like someday!</h3>");
+    }
+ 
+
+
+ </script>
+ <!-- Reflection:  Chose to use confirm as I didn't use it in the prior problems. Ran into issue with closing braces which caused an exception. Fixed by adding the missing braces-->
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #10a631;
+        }
+        b {
+            color: #1E90FF;
+        }
+      
+    </style>
+</head>
+<body>
+  <h1>Problem 3</h1>
+  <h2>Average Book Price</h2>
+ <script>
+    let priceBook1=0;
+    let priceBook2=0;
+    let priceBook3=0;
+    let averagePrice=0
+        
+    while (priceBook1 === "" || isNaN(priceBook1) || priceBook1 === null || priceBook1 <= 0) 
+    {
+        priceBook1 = prompt("Enter the price of Book 1:");
+    }
+
+    while (priceBook2 === "" || isNaN(priceBook2) || priceBook2 === null || priceBook2 <= 0) 
+    {
+        priceBook2 = prompt("Enter the price of Book 2:");
+    }
+
+    while (priceBook3 === "" || isNaN(priceBook3) || priceBook3 === null || priceBook3 <= 0) 
+    {
+        priceBook3 = prompt("Enter the price of Book 3:");
+    }
+
+    priceBook1=Number(priceBook1);
+    priceBook2=Number(priceBook2);
+    priceBook3=Number(priceBook3);
+
+    averagePrice=(priceBook1 + priceBook2 + priceBook3) / 3;
+
+    if (averagePrice > 100)
+        document.write("<h3>Average: <b>$ " + averagePrice.toFixed(2) + "</b> - Too Expensive</h3>");
+    else
+        document.write("<h3>Average: <b>$" + averagePrice.toFixed(2) + "</b> - Okay</h3>");
+
+ </script>
+ <!-- Reflection:  Chose to use .toFixed(2) for formatting the average price to two decimal places-->
+</body>
+</html>

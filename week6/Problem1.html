@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #10a631;
+        }
+        h3 {
+            color: #ff5733;
+        }
+        b {
+         color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+  <h1>Problem 1</h1>
+  <h2>Rectangle Math</h2>
+ <script>
+    let Height=0;
+    let Width=0;
+    let area=0;
+    let perimeter=0;
+
+    while (Height === "" || isNaN(Height) || Height <= 0 || Height === null) 
+    {
+        Height = prompt("Enter the height of the rectangle:");
+    }
+
+    while (Width === "" || isNaN(Width) || Width <= 0 || Width === null) 
+    {
+        Width = prompt("Enter the width of the rectangle:");
+    }
+
+    Height=Number(Height);
+    Width=Number(Width);
+
+    area=Height * Width;
+    perimeter=2 * (Height + Width);
+
+    document.write("<h3>Rectangle Dimensions</h3>");
+    document.write("<h4>Height: <b>" + Height + "</b></h4>");
+    document.write("<h4>Width: <b>" + Width + "</b></h4>");    
+    document.write("<h4 title='Area of the rectangle - Height * Width'>Area: <b>" + area + "</b></h4>");
+    document.write("<h4 title='Perimeter of the rectangle - 2 * (Height + Width)'>Perimeter: <b>" + perimeter + "</b></h4>");
+
+ </script>
+ <!-- Reflection: Used Number function to allow for Integer or float numbers; validated input prior to processing to ensure the user entered a valid number -->
+</body>
+</html>
